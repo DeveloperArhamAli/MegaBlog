@@ -43,6 +43,7 @@ function PostForm({post}) {
                     ...data,
                     userId: userData.$id
                 })
+
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`)
                 }
@@ -55,7 +56,7 @@ function PostForm({post}) {
         return value
             .trim()
             .toLowerCase()
-            .replace(/^[a-zA-Z\d\s]+/g, '-')
+            .replace(/[^a-zA-Z\d\s]+/g, '-')
             .replace(/\s/g, '-')
         
         return ""

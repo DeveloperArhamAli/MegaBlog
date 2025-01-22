@@ -20,8 +20,6 @@ function Login() {
                 const userData = await authService.getCurrentUser()
                 if (userData) dispatch(authLogin(userData))
                 navigate("/")
-            } else {
-                
             }
         } catch (error) {
             setError(error.message)

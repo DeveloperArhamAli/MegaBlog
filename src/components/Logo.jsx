@@ -1,6 +1,6 @@
-function Logo({width = "100px"}) {
+function Logo({width = "100px", className}) {
     return (
-        <div>Logo</div>
+        <div className={className}>Mega Blog</div>
     )
 }
 export default Logo

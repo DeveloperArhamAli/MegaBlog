@@ -1,5 +1,5 @@
 import { Container, Logo, LogoutBtn } from "../index"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 function Header() {
@@ -34,20 +34,18 @@ function Header() {
     ]
 
     return (
-        <header className="py-3 shadow bg-gray-500">
+        <header className="py-3 shadow bg-blue-500 text-white">
             <Container>
-                <nav className="flex">
+                <nav className="flex items-center justify-between">
                     <div className="mr-4">
                         <Link to="/">
-                            <Logo width="70px"/>
+                            <Logo width="70px" className="text-xl uppercase"/>
                         </Link>
                     </div>
-                    <ul className="flex ml-auto">
+                    <ul className="flex items-center gap-3">
                         {navItems.map((item) => item.active ? (
                             <li key={item.name}>
-                                <button 
-                                    onClick={() => navigate(item.slug)}
-                                    className="inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full">{item.name}</button>
+                                <NavLink to={item.slug} className={({isActive}) => `inline-block px-6 py-2 duration-200 rounded-lg ${isActive ? "bg-white text-blue-500 font-bold" : ""}`}>{item.name}</NavLink>
                             </li>
                         ) : null
                         )}
