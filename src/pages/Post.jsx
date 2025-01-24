@@ -62,7 +62,6 @@ export default function Post() {
                         </div>
                         <div className="w-full mb-6 flex flex-col">
                             <h1 className="text-2xl font-bold">{post.title}</h1>
-                            <h1 className="text-lg font-bold text-green-700">by {userData.name}</h1>
                         </div>
                     </div>
                 </div>
