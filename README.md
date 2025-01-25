@@ -20,7 +20,7 @@ A production-ready blog application built with **React.js** (Vite). This applica
 ---
 
 ## **Demo**
-[mega-blog-arham-alis-projects.vercel.app](mega-blog-arham-alis-projects.vercel.app)
+[mega-blog-arham-alis-projects.vercel.app](https://mega-blog-arham-alis-projects.vercel.app)
 ---
 
 ## **Getting Started**
@@ -94,7 +94,7 @@ Contributions are welcome! Please fork this repository, create a feature branch,
 ---
 
 ## **License**
-This project is built with the help of a youtube course owned by [Hitesh Choudhary](github.com/hiteshchoudhary).
+This project is built with the help of a youtube course owned by [Hitesh Choudhary](https://github.com/hiteshchoudhary).
 
 ---
 
@@ -102,4 +102,4 @@ This project is built with the help of a youtube course owned by [Hitesh Choudha
 For questions or suggestions, feel free to reach out:
 - Email: muhammadarhamalikhan2009@gmail.com
 - GitHub: [DeveloperArhamAli](https://github.com/DeveloperArhamAli)
-- Instagram: [developerarhamali](instagram.com/developerarhamali)
+- Instagram: [developerarhamali](https://instagram.com/developerarhamali)
