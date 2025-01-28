@@ -75,8 +75,9 @@ function PostForm({post}) {
     }, [watch, slugTransform, setValue])
     
     return (
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+        <form onSubmit={handleSubmit(submit)} className="flex flex-col sm:flex-row">
+            <div className="w-full px-2 sm:w-2/3">
+                <h1 className="text-2xl text-center my-2">Create New Post</h1>
                 <Input label="Title :" placeholder="Title" className="mb-4" {...register("title", { required: true })}
                 />
                 <Input label="Slug :" placeholder="Slug" className="mb-4" {...register("slug", { required: true })} onInput={(e) => {
@@ -85,7 +86,7 @@ function PostForm({post}) {
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="w-full px-2 py-4 sm:w-1/3 sm:mt-7">
                 <Input label="Featured Image :" type="file" className="mb-4" accept="image/png, image/jpg, image/jpeg, image/gif" {...register("image", { required: !post })}
                 />
                 {post && (
@@ -97,7 +98,7 @@ function PostForm({post}) {
                 <Select options={["active", "inactive"]} label="Status" className="mb-4" {...register("status", { required: true })}
                 />
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
-                    {post ? "Update" : "Submit"}
+                    {post ? "Update Post" : "Create Post"}
                 </Button>
             </div>
         </form>

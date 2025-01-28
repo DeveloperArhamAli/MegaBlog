@@ -40,7 +40,7 @@ export default function Post() {
     return post ? (
         <div className="py-8">
             <Container>
-                <div className="flex">
+                <div className="flex flex-col">
                     <div className="w-full flex justify-center mb-4 mr-7 relative border rounded-xl p-2">
                         <img
                             src={appwriteService.getFilePreview(post.featuredImage)}
@@ -62,11 +62,11 @@ export default function Post() {
                         )}
                     </div>
                     <div>
-                        <div className="browser-css bg-blue-100 p-5 rounded-md h-fit">
-                            {parse(post.content)}
-                        </div>
                         <div className="w-full mb-6 flex flex-col">
                             <h1 className="text-2xl font-bold">{post.title}</h1>
+                        </div>
+                        <div className="browser-css bg-blue-100 p-5 rounded-md h-fit">
+                            {parse(post.content)}
                         </div>
                     </div>
                 </div>

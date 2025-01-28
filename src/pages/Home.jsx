@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import appwriteService from "../appwrite/config"
 import { Container, PostCard } from "../components"
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 function Home() {
     const [posts, setPosts] = useState([])
@@ -23,7 +24,7 @@ function Home() {
                 <Container>
                     <div className='flex flex-wrap'>
                         {posts.map((post) => (
-                            <div key={post.$id} className='p-2 w-1/4'>
+                            <div key={post.$id} className='p-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4'>
                                 <PostCard {...post} />
                             </div>
                         ))}
@@ -46,11 +47,12 @@ function Home() {
         }
     } else if (!userData) {
         return (
-            <div className="w-full py-8 mt-4 text-center">
+            <div className="w-full py-8 mt-4 text-center h-screen flex items-center">
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold">Please login to view posts</h1>
+                            <h1 className="text-2xl font-bold mb-5">PLEASE LOGIN TO VIEW ALL POSTS</h1>
+                            <Link to="/login" className="bg-white px-4 py-2 rounded text-xl">Login</Link>
                         </div>
                     </div>
                 </Container>
